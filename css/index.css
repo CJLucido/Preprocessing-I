@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/************variables****/
+/*********MIXINS*******/
 html,
 body,
 div,
@@ -86,7 +88,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -106,6 +108,28 @@ section {
 }
 body {
   line-height: 1;
+  font-family: 'Slabo 27px', serif;
+}
+h1 {
+  font-size: 4rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  padding: 4% 2%;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  padding: 4% 2%;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2.25rem;
 }
 ol,
 ul {
@@ -134,3 +158,24 @@ html,
 body {
   height: 100%;
 }
+/***HEADER END****/
+/***BRIEF END****/
+/****SKILLS END***/
+/****WORKHIST END****/
+.contact .contactForm {
+  background-color: #FFFDD0;
+  border: 2px solid grey;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 4% 2%;
+  font-family: 'Crimson Text', serif;
+}
+.contact .contactForm .contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/****CONTACT END***/
