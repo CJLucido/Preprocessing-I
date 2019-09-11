@@ -158,18 +158,128 @@ html,
 body {
   height: 100%;
 }
-/***HEADER END****/
-/***BRIEF END****/
-/****SKILLS END***/
-/****WORKHIST END****/
-.contact .contactForm {
-  background-color: #FFFDD0;
-  border: 2px solid grey;
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url('/images/opportunityDocks.jpg');
+}
+header .logo {
+  padding: 4% 2%;
+  font-size: 4.5rem;
+  width: 10%;
+}
+header nav {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 100%;
+}
+header h1 {
+  width: 90%;
+}
+/***HEADER END****/
+.brief {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: #FFFDD0;
+}
+.brief ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.brief li {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+  border-bottom: 3px solid grey;
+  width: 60%;
+}
+.brief p {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin: 1%;
+}
+/***BRIEF END****/
+.Skills {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: lightblue;
+}
+.Skills ul {
+  list-style-type: square;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+  font-size: 1.5rem;
+}
+.Skills ul li {
+  padding: 1%;
+  margin: 1%;
+}
+/****SKILLS END***/
+.workHistory {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: #FFFDD0;
+  padding: 4% 2%;
+}
+.workHistory img {
+  width: 100%;
+}
+.workHistory h2 {
+  width: 100%;
+}
+.workHistory p {
+  padding: 4% 2%;
+  padding-top: 1%;
+  font-size: 1.2rem;
+}
+.workHistory ul {
+  list-style-type: square;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+  font-size: 1.5rem;
+}
+.workHistory ul li {
+  padding: 1%;
+  margin: 1%;
+}
+/****WORKHIST END****/
+.contact {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: lightblue;
+}
+.contact .contactForm {
+  background-color: #FFFDD0;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 4% 2%;
   font-family: 'Crimson Text', serif;
 }
@@ -177,5 +287,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.contact .contactForm .contactForm .form {
+  padding: 4% 2%;
 }
 /****CONTACT END***/

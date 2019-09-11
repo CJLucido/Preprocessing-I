@@ -13,6 +13,8 @@
 
 @internalColor: #FFFDD0;
 
+@outsideColor: lightblue;
+
 /*********MIXINS*******/
 
 .center(){
@@ -20,6 +22,7 @@
 	justify-content: center;
 	align-content:center;
 	align-items: center;
+	flex-wrap: wrap;
 	max-width:100%;
 }
 
@@ -35,6 +38,22 @@
 
 .whatGoesAroundComesAround(){
 	border-radius: 3%;
+}
+
+.listless(){
+	list-style-type: square;
+	width: 75%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 4%;
+	font-size: 1.5rem;
+	
+}
+
+.minipads(){
+	padding: 1%;
+	margin: 1%;
 }
 
 
@@ -115,22 +134,25 @@ html, body {
 }
 
 header{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-image: url('/images/opportunityDocks.jpg');
 
 	.logo{
-
+		.giveMeSpace();
+		font-size: 4.5rem;
+		width: 10%;
 	}
 
 	nav{
-
+		.center();
 	}
 
 	h1{
-
+		width: 90%;
 	}
 
-	img{
-
-	}
 
 
 } /***HEADER END****/
@@ -138,65 +160,98 @@ header{
 
 .brief {
 
-	h2{
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	max-width: 100%;
+	background-color: @internalColor;
 
+	ul{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	li{
-
+		font-size: 1.5rem;
+		text-align: center;
+		padding: 1%;
+		margin: 1%;
+		border-bottom: 3px solid grey;
+		width: 60%;
 	}
 
 	p{
-
+		font-size: 1.2rem;
+		.minipads();
 	}
 
 }/***BRIEF END****/
 
 
 .Skills {
+	.center();
+	background-color: @outsideColor;
 	
-	h2{
 
-	}
+	ul{
+		.listless();
 
-	li{
-
+		li{
+			.minipads();
+		}
 	}
 
 }/****SKILLS END***/
 
 
 .workHistory{
+	.center();
+	background-color:@internalColor;
+	.giveMeSpace();
 
 	img{
-
+		width: 100%;
 	}
 
 	h2{
-
+		width: 100%;
 	}
 
 	p{
-
+		.giveMeSpace();
+		padding-top: 1%;
+		font-size: 1.2rem;
 	}
 
-	li{
+	ul{
+		.listless();
 
+		li{
+			.minipads();
+		}
 	}
 
 }/****WORKHIST END****/
 
 
 .contact{
+	.center();
+	background-color: @outsideColor;
+
 	.contactForm{
 		background-color: @internalColor;
 		border: 2px solid grey;
-		.center();
+		.column;
 		.giveMeSpace();
 		font-family: @contactText;
 
 		.contactForm{
 			.column();
+			
+			.form{
+				.giveMeSpace();
+			}
 		}
 	}
 
