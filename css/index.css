@@ -162,7 +162,12 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-image: url('/images/opportunityDocks.jpg');
+  height: 30%;
+  width: 100vw;
+  background-image: url('.\images\opportunityDocks.jpg');
+  /**********NOT WORKING****/
+  margin: 4%;
+  /******end of Media query***/
 }
 header .logo {
   padding: 4% 2%;
@@ -179,6 +184,13 @@ header nav {
 }
 header h1 {
   width: 90%;
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 30%;
+    margin: 4%;
+    /*****font-size changes were also NOT WORKING****/
+  }
 }
 /***HEADER END****/
 .brief {
@@ -205,6 +217,7 @@ header h1 {
   font-size: 1.2rem;
   padding: 1%;
   margin: 1%;
+  text-align: center;
 }
 /***BRIEF END****/
 .Skills {
@@ -239,9 +252,12 @@ header h1 {
   max-width: 100%;
   background-color: #FFFDD0;
   padding: 4% 2%;
+  padding: 0;
+  padding-top: 0;
 }
 .workHistory img {
   width: 100%;
+  border: 3px solid grey;
 }
 .workHistory h2 {
   width: 100%;
@@ -273,6 +289,7 @@ header h1 {
   flex-wrap: wrap;
   max-width: 100%;
   background-color: lightblue;
+  /******end of Media query***/
 }
 .contact .contactForm {
   background-color: #FFFDD0;
@@ -283,12 +300,62 @@ header h1 {
   padding: 4% 2%;
   font-family: 'Crimson Text', serif;
 }
-.contact .contactForm .contactForm {
+.contact .contactForm .form {
+  margin: 5%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  max-width: 100%;
+  text-align: center;
+  justify-content: space-around;
 }
-.contact .contactForm .contactForm .form {
-  padding: 4% 2%;
+.contact .contactForm button {
+  margin: 4%;
+  width: 50%;
+  border-radius: 3%;
+  align-self: center;
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    display: none;
+  }
+  .contact .mobileContact {
+    display: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: lightblue;
+  }
+  .contact .mobileContact h1 {
+    width: 90%;
+  }
 }
 /****CONTACT END***/
+.mobileContact {
+  /******end of Media query***/
+}
+@media screen and (min-width: 500px) {
+  .mobileContact {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobileContact {
+    display: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: lightblue;
+  }
+  .mobileContact h1 {
+    width: 90%;
+  }
+}

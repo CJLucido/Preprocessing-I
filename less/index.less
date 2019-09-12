@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 
+
+
 /************variables****/
 @headingText:'Merriweather', serif;
 
@@ -85,6 +87,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: @bodyText;
+	
 }
 
 h1 {
@@ -137,7 +140,11 @@ header{
 	display:flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-image: url('/images/opportunityDocks.jpg');
+	height: 30%;
+	width: 100vw;
+	background-image: url('.\images\opportunityDocks.jpg'); /**********NOT WORKING****/
+	margin: 4%;
+	
 
 	.logo{
 		.giveMeSpace();
@@ -152,6 +159,16 @@ header{
 	h1{
 		width: 90%;
 	}
+
+	@media screen and (max-width:500px){
+			height: 30%;
+			margin: 4%;
+		/*****font-size changes were also NOT WORKING****/
+		
+	
+	}/******end of Media query***/
+
+		
 
 
 
@@ -184,6 +201,7 @@ header{
 	p{
 		font-size: 1.2rem;
 		.minipads();
+		text-align: center;
 	}
 
 }/***BRIEF END****/
@@ -209,9 +227,13 @@ header{
 	.center();
 	background-color:@internalColor;
 	.giveMeSpace();
+	padding: 0;
+	padding-top: 0;
+	
 
 	img{
 		width: 100%;
+		border: 3px solid grey;
 	}
 
 	h2{
@@ -246,13 +268,60 @@ header{
 		.giveMeSpace();
 		font-family: @contactText;
 
-		.contactForm{
-			.column();
-			
-			.form{
-				.giveMeSpace();
-			}
+		.form{
+			margin: 5%;
+			.center();
+			text-align: center;
+			justify-content: space-around;
+		}
+
+		button{
+			margin: 4%;
+			width: 50%;
+			.whatGoesAroundComesAround();
+			align-self: center;
 		}
 	}
 
+
+
+
+	@media screen and (max-width:500px){
+		
+		
+		display: none;
+	
+	
+		.mobileContact{
+			display:auto;
+			.center();
+			background-color: @outsideColor;
+	
+			h1{
+				width: 90%;
+			}
+		}
+	}/******end of Media query***/
+	
+
 }/****CONTACT END***/
+
+.mobileContact{
+
+		@media screen and (min-width: 500px){
+			display:none;
+			}
+
+
+		@media screen and (max-width:500px){
+			display:auto;
+			.center();
+			background-color: @outsideColor;
+
+			h1{
+			width: 90%;
+			}
+
+		}/******end of Media query***/
+
+}
