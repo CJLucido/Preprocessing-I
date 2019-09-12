@@ -154,6 +154,10 @@ table {
 * {
   box-sizing: border-box;
 }
+.container {
+  max-width: 100%;
+  border: 1px solid grey;
+}
 html,
 body {
   height: 100%;
@@ -163,10 +167,12 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   height: 30%;
-  width: 100vw;
+  width: 100%;
   background-image: url('.\images\opportunityDocks.jpg');
   /**********NOT WORKING****/
-  margin: 4%;
+  margin: 0%;
+  border: 1px solid blue;
+  /******end of Media query***/
   /******end of Media query***/
 }
 header .logo {
@@ -185,9 +191,16 @@ header nav {
 header h1 {
   width: 90%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 455px) {
   header {
-    height: 30%;
+    height: 40%;
+    margin: 4%;
+    /*****font-size changes were also NOT WORKING****/
+  }
+}
+@media screen and (max-width: 287px) {
+  header {
+    height: 50%;
     margin: 4%;
     /*****font-size changes were also NOT WORKING****/
   }
