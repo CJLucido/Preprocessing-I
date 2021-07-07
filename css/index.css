@@ -1,1 +1,374 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/************variables****/
+/*********MIXINS*******/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Slabo 27px', serif;
+}
+h1 {
+  font-size: 4rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  padding: 4% 2%;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  padding: 4% 2%;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2.25rem;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 100%;
+  border: 1px solid grey;
+}
+html,
+body {
+  height: 100%;
+}
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 30%;
+  width: 100%;
+  background-image: url('.\images\opportunityDocks.jpg');
+  /**********NOT WORKING****/
+  margin: 0%;
+  border: 1px solid blue;
+  /******end of Media query***/
+  /******end of Media query***/
+}
+header .logo {
+  padding: 4% 2%;
+  font-size: 4.5rem;
+  width: 10%;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+header h1 {
+  width: 90%;
+}
+@media screen and (max-width: 455px) {
+  header {
+    height: 40%;
+    margin: 4%;
+    /*****font-size changes were also NOT WORKING****/
+  }
+}
+@media screen and (max-width: 287px) {
+  header {
+    height: 50%;
+    margin: 4%;
+    /*****font-size changes were also NOT WORKING****/
+  }
+}
+/***HEADER END****/
+.brief {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: #FFFDD0;
+}
+.brief ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.brief li {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+  border-bottom: 3px solid grey;
+  width: 60%;
+}
+.brief p {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+}
+/***BRIEF END****/
+.Skills {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: lightblue;
+}
+.Skills ul {
+  list-style-type: square;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+  font-size: 1.5rem;
+}
+.Skills ul li {
+  padding: 1%;
+  margin: 1%;
+}
+/****SKILLS END***/
+.workHistory {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: #FFFDD0;
+  padding: 4% 2%;
+  padding: 0;
+  padding-top: 0;
+}
+.workHistory img {
+  width: 100%;
+  border: 3px solid grey;
+}
+.workHistory h2 {
+  width: 100%;
+}
+.workHistory p {
+  padding: 4% 2%;
+  padding-top: 1%;
+  font-size: 1.2rem;
+}
+.workHistory ul {
+  list-style-type: square;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+  font-size: 1.5rem;
+}
+.workHistory ul li {
+  padding: 1%;
+  margin: 1%;
+}
+/****WORKHIST END****/
+.contact {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: lightblue;
+  /******end of Media query***/
+}
+.contact .contactForm {
+  background-color: #FFFDD0;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 4% 2%;
+  font-family: 'Crimson Text', serif;
+}
+.contact .contactForm .form {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  text-align: center;
+  justify-content: space-around;
+}
+.contact .contactForm button {
+  margin: 4%;
+  width: 50%;
+  border-radius: 3%;
+  align-self: center;
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    display: none;
+  }
+  .contact .mobileContact {
+    display: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: lightblue;
+  }
+  .contact .mobileContact h1 {
+    width: 90%;
+  }
+}
+/****CONTACT END***/
+.mobileContact {
+  /******end of Media query***/
+}
+@media screen and (min-width: 500px) {
+  .mobileContact {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobileContact {
+    display: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: lightblue;
+  }
+  .mobileContact h1 {
+    width: 90%;
+  }
+}

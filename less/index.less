@@ -4,6 +4,61 @@
    License: none (public domain)
 */
 
+
+
+/************variables****/
+@headingText:'Merriweather', serif;
+
+@bodyText: 'Slabo 27px', serif;
+
+@contactText: 'Crimson Text', serif;
+
+@internalColor: #FFFDD0;
+
+@outsideColor: lightblue;
+
+/*********MIXINS*******/
+
+.center(){
+	display:flex;
+	justify-content: center;
+	align-content:center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width:100%;
+}
+
+.column(){
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.giveMeSpace(){
+	padding: 4% 2%;
+}
+
+.whatGoesAroundComesAround(){
+	border-radius: 3%;
+}
+
+.listless(){
+	list-style-type: square;
+	width: 75%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 4%;
+	font-size: 1.5rem;
+	
+}
+
+.minipads(){
+	padding: 1%;
+	margin: 1%;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +75,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -31,7 +86,31 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: @bodyText;
+	
 }
+
+h1 {
+	font-size: 4rem;
+	font-family: @headingText;
+	text-align: center;
+	.giveMeSpace();
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: @headingText;
+	text-align: center;
+	.giveMeSpace();
+}
+
+h2{
+	font-size: 2.5rem;
+}
+
+h3{
+	font-size: 2.25rem;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -50,10 +129,219 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+
+.container{
+	max-width: 100%;
+	border: 1px solid grey;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+header{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 30%;
+	width: 100%;
+	background-image: url('.\images\opportunityDocks.jpg'); /**********NOT WORKING****/ 
+	margin: 0%;
+	border: 1px solid blue;
+
+	.logo{
+		.giveMeSpace();
+		font-size: 4.5rem;
+		width: 10%;
+	}
+
+	nav{
+		.center();
+	}
+
+	h1{
+		width: 90%;
+	}
+
+	@media screen and (max-width:455px){
+		height: 40%;
+		margin: 4%;
+
+		
+	/*****font-size changes were also NOT WORKING****/
+	
+
+}/******end of Media query***/
+
+
+	@media screen and (max-width:287px){
+		height: 50%;
+		margin: 4%;
+
+		
+	/*****font-size changes were also NOT WORKING****/
+	
+
+}/******end of Media query***/
+
+
+
+
+
+
+} /***HEADER END****/
+
+
+.brief {
+
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	max-width: 100%;
+	background-color: @internalColor;
+
+	ul{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	li{
+		font-size: 1.5rem;
+		text-align: center;
+		padding: 1%;
+		margin: 1%;
+		border-bottom: 3px solid grey;
+		width: 60%;
+	}
+
+	p{
+		font-size: 1.2rem;
+		.minipads();
+		text-align: center;
+	}
+
+}/***BRIEF END****/
+
+
+.Skills {
+	.center();
+	background-color: @outsideColor;
+	
+
+	ul{
+		.listless();
+
+		li{
+			.minipads();
+		}
+	}
+
+}/****SKILLS END***/
+
+
+.workHistory{
+	.center();
+	background-color:@internalColor;
+	.giveMeSpace();
+	padding: 0;
+	padding-top: 0;
+	
+
+	img{
+		width: 100%;
+		border: 3px solid grey;
+	}
+
+	h2{
+		width: 100%;
+	}
+
+	p{
+		.giveMeSpace();
+		padding-top: 1%;
+		font-size: 1.2rem;
+	}
+
+	ul{
+		.listless();
+
+		li{
+			.minipads();
+		}
+	}
+
+}/****WORKHIST END****/
+
+
+.contact{
+	.center();
+	background-color: @outsideColor;
+
+	.contactForm{
+		background-color: @internalColor;
+		border: 2px solid grey;
+		.column;
+		.giveMeSpace();
+		font-family: @contactText;
+
+		.form{
+			margin: 5%;
+			.center();
+			text-align: center;
+			justify-content: space-around;
+		}
+
+		button{
+			margin: 4%;
+			width: 50%;
+			.whatGoesAroundComesAround();
+			align-self: center;
+		}
+	}
+
+
+
+
+	@media screen and (max-width:500px){
+		
+		
+		display: none;
+	
+	
+		.mobileContact{
+			display:auto;
+			.center();
+			background-color: @outsideColor;
+	
+			h1{
+				width: 90%;
+			}
+		}
+	}/******end of Media query***/
+	
+
+}/****CONTACT END***/
+
+.mobileContact{
+
+		@media screen and (min-width: 500px){
+			display:none;
+			}
+
+
+		@media screen and (max-width:500px){
+			display:auto;
+			.center();
+			background-color: @outsideColor;
+
+			h1{
+			width: 90%;
+			}
+
+		}/******end of Media query***/
+
+}

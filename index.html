@@ -3,17 +3,158 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume: Lucido</title>
 
-  <title>My Resume</title>
+  <!--GoogleFonts-->
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Merriweather|Slabo+27px&display=swap" rel="stylesheet">
+
+  <!--FontAwesome-->
+  <script src="https://kit.fontawesome.com/207f05862c.js"></script>
 
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+  <header>
+    <div class="logo">
+        <i class="fab fa-phoenix-framework"></i>
+    </div>
+    <nav>
+      <a href="#"></a>
+    </nav>
+    <h1>The Resume of Carlo Lucido</h1>
+    <!--<img src="css/images/opportunityDocks.jpg" alt="Background image shows">
+    -->
+  </header>
+
+  <section class="brief">
+    <h2>My current objectives:</h2>
+    <ul>
+      <li>Projects involving robotics or ai</li>
+      <li>More JS work</li>
+      <li>Learning software to circuitry interactions</li>
+    </ul>
+
+    <p>Projects that meet and of my current objectives will be done at 75% cost. I appreciate opportunities to learn in areas extremely out of my element.</p>
+  </section>
+
+  <section class="Skills">
+    <h2>Summary of Qualifications</h2>
+    <ul class="skillList">
+        <li>Meets Secretary of Interior's standards (SOI qualified)</li>
+        <li>M.A. in Anthropology. May 2015, University of Central Florida</li>
+        <li>Register of Professional Archaeologists (RPA) since July 2017.</li>
+        <li>B.A. in Anthropology. December 2009, University of Central Florida</li>
+        <li>10 years of management experience for civilian companies and academic projects</li>
+        <li>12 months of archaeological monitoring </li>
+        <li>Extensive investigative, research, multi-discipline archaeological and anthropological skills and experience; 45 months field/lab, 22 months university teaching</li>
+        <li>Trained by Drs. Sarah B. Barber and Arthur A. Joyce for current trends in Phase III Oaxaca fieldwork and theory</li>
+        <li>Trained by THPO of Florida Seminole Tribe in Phase I & II conservation archaeology in accordance with NAGPRA</li>
+        <li>Familiar with Configuration/Version control of documentation (including Software and Hardware documents) </li>
+        <li>Experienced in Quality Assurance, Database Management (Front End), Geospatial mapping (on-ground and remote)</li>
+        <li> Led training operations for one year during fieldwork (approximately 6 two person crews - Spanish speaking, 3 students)</li>
+        <li>Experienced in Payroll and Project Expense responsibilities</li>
+        <li>Familiar with Ground Penetrating Radar (mounds and graves)</li>
+        <li>ArchCad digital mapping of structures</li>
+      </ul>
+  </section>
+
+  <section class="workHistory">
+    <img src="css/images/monteAlban.jpg" alt="Background image shows">
+    <h2>Past Positions</h2>
+    <p>My past positions vary but have culminated in a wide ken.</p>
+    <ul class="positionList">
+        <li>Incident Management
+            Environmental and Historic Preservation
+            EHP Historic Preservation Specialist
+            • 09/2018 – PRESENT</li>
+        <li>Archaeological Monitor
+            Open Range Archaeology
+            Northwest Arkansas (Hackett to Damascus) • 10/2016 – 10/2017
+            40-80hrs/week
+            </li>
+        <li>Configuration Manager/Database Manager
+            Nova Technologies: An Employee-Owned Engineering Company
+            Orlando, FL • 05/2014 – 12/2014
+            40-60hrs/week
+            </li>
+        <li>Site Director | Crew Chief | Lab and Research Assistant
+            Proyecto Rio Verde 
+            Oaxaca, MX and Orlando, FL • 02/2008– 06/2013
+            50-80hrs/week
+            </li>
+        <li>Archaeological Field Technician	       
+            Tribal Historic Preservation Office (Tribal Government Position)
+            Big Cypress and Brighton Seminole Reservations, FL • 11/2010– 08/2011
+            40-60hrs/week
+            </li>
+        <li>Teaching Assistant			    				   		   
+            Dept. of Anthropology							          
+            Orlando, FL • 08/2011– 06/2013
+            20hrs/week
+            </li>
+        <li>
+            Mechanical Technician			    			       
+            Kratos							              
+            Orlando, FL • 2012
+            35-40hrs/week
+        </li>
+        <li>
+            Mechanical Technician			    			       
+            DEI Service Corp. (now Kratos)		           
+            Orlando, FL • 2006-2009
+            35-40hrs/week
+        </li>
+      </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Think you have a job that I can handle?</h2>
+
+    <div class="contactForm">
+      <h3>Reach out to me!</h3>
+        <div class="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="form">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="form">
+            <label for="Message">Message</label>
+            <input type="text" name="message" id="message">
+        </div>
+
+        <button onclick="myFunction()">Propose Project</button>
+    </div> <!--end of class contactForm-->
+
+
+  </section>
+
+  <section class="mobileContact">
+        <div>
+          <h2>If urgent call me at 352-215-1376!</h2>
+        </div>
+  </section>
+
+</div>
+
+
 </body>
+
+<script>
+      function  myFunction() {
+          alert("Im on vacation backpacking across the UP!");
+        }
+</script>
+
 </html>
